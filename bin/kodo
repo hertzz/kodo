@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+#
+# Kodo
+# https://github.com/hertzz/kodo
+#
+
+require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'kodo'))
+Kodo::CLI.parse(ARGV)

@@ -1,9 +1,7 @@
 module Kodo
-  class <<self
-    class KodoException < StandardError
-    end
-
-    class ParameterNotFound < KodoException; end
-    class GeneratorNotFound < KodoException; end
+  class KodoException < StandardError
   end
+
+  class ParameterNotFound < KodoException; end
+  class AlgorithmNotFound < KodoException; end
 end

@@ -8,6 +8,6 @@ require 'securerandom'
 # Internal includes
 require 'kodo/version'
 require 'kodo/exceptions'
-require 'kodo/core/config'
 require 'kodo/core/cli'
-require 'kodo/generators'
+require 'kodo/core/generator'
+require 'kodo/algorithms'

@@ -4,4 +4,5 @@ module Kodo
 
   class ParameterNotFound < KodoException; end
   class AlgorithmNotFound < KodoException; end
+  class InvalidArgumentCombination < KodoException; end
 end

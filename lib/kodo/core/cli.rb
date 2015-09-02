@@ -25,6 +25,10 @@ module Kodo
             options.count = c
           end
 
+          opts.on('-m', '--max-length SIZE', 'Length of generated entries (random)') do |m|
+            options.max_length = m
+          end
+
           opts.on_tail('-v', '--version', 'Show version information') do
             puts "kodo #{Kodo::VERSION}"
             puts "Copyright (C) 2015 - #{Kodo::AUTHOR_NAME.join(',')}"

@@ -9,6 +9,15 @@ $ gem install kodo
 ```
 
 ## Algorithms
+#### Random
+```shell
+$ kodo -a random
+ocj8=g[imQ`e\?Zu
+
+$ kodo -a random -m 32
+JCHeWIbnomFq=[RD\1r0_vE2hTVZXL<>
+```
+
 #### Base64
 ```shell
 $ kodo -a base64
@@ -32,6 +41,7 @@ $ kodo -a md5
 usage: kodo [OPTIONS]
     -a, --algorithm TYPE             Generation algorithm
     -c, --count NUMBER               Number of entries to generate
+    -m, --max-length SIZE            Length of generated entries (random)
     -v, --version                    Show version information
     -h, --help                       Show this help menu
 ```

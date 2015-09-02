@@ -1,12 +1,27 @@
 module Kodo
   class Generator
-    attr_reader :algorithm, :count
+    attr_reader :algorithm, :count, :max_length
 
     DEFAULT_ALGORITHM = "md5"
 
     def initialize(options=nil)
       self.algorithm = options.algorithm
       self.count = options.count
+      self.max_length = options.max_length
+    end
+
+    def max_length=(size=nil)
+      if !size.nil?
+        if @algorithm != Kodo::Algorithms::Random
+          raise Kodo::InvalidArgumentCombination, "Max length cannot be used for the #{@algorithm.name} algorithm"
+        end
+
+        if size.to_i >= 1 && size.to_i <= 512
+          @max_length = size.to_i
+        else
+          raise Exception, 'Max length must be greater than 1 and less than 512'
+        end
+      end
     end
 
     def algorithm=(type=nil)
@@ -36,7 +51,7 @@ module Kodo
     end
 
     def run
-      algorithm = @algorithm.new(@count)
+      algorithm = @algorithm.new(@count, @max_length)
       algorithm.create
     end
 

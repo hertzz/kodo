@@ -6,7 +6,7 @@ require 'kodo/version'
 Gem::Specification.new do |s|
   s.name            = 'kodo'
   s.version         = Kodo::VERSION
-  s.date            = '2015-09-03'
+  s.date            = '2015-09-06'
   s.summary         = 'Unique random generator'
   s.description     = 'Generates random strings/sequences using various algorithms'
   s.authors         = Kodo::AUTHOR_NAME
